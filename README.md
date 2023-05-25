@@ -15,7 +15,6 @@ Those commands are also available from the command palette.
 
 ## Known Issues
 
--
 
 ## Change log
 See [CHANGELOG.md](./CHANGELOG.md)
