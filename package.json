@@ -1,7 +1,7 @@
 {
   "name": "git-by-solrike",
   "displayName": "Git by Solrike",
-  "description": "Visual studio code Git extension for explorer context menu for popular commands like 'Replace with HEAD revision'/'Discard Changes' and 'Compare with HEAD revision'/'Open Changes'",
+  "description": "Visual studio code extension. Adds popular Git commands to the explorer context menu. For those that miss context menu items from Eclipse.",
   "version": "0.0.1",
   "license": "MIT",
   "author": "Lucas Persson",
@@ -69,7 +69,7 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.78.0",
+    "@types/vscode": "^1.74.0",
     "@types/glob": "^8.1.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "16.x",

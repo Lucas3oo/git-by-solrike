@@ -1,12 +1,10 @@
 # Git by Solrike
 
-Visual studio code Git extension for explorer context menu for popular commands like 'Replace with HEAD revision'/'Discard Changes' and 'Compare with HEAD revision'/'Open Changes'
-
-For those that miss context menu items from Eclipse.
+Visual studio code extension. Adds popular Git commands to the explorer context menu. For those that miss context menu items from Eclipse.
 
 ## Features
 
-The explorer context menu will have two additional items:
+The explorer context menu will have two additional items when a file is selected:
 
 * Replace with HEAD revision - basically a `git checkout`
 * Compare with HEAD revision - basically a `git diff` 
