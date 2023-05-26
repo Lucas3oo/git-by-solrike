@@ -2,7 +2,7 @@
   "name": "git-by-solrike",
   "displayName": "Git by Solrike",
   "description": "Adds popular Git commands to the explorer context menu. For those that miss context menu items from Eclipse.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "author": "Lucas Persson",
   "publisher": "solrike",  
@@ -47,17 +47,29 @@
     "menus": {
       "explorer/context": [
         {
-          "when": "!explorerResourceIsFolder",
           "command": "git-by-solrike.openChanges",
+          "when": "!explorerResourceIsFolder",
           "group": "Git@20"
         },
         {
-          "when": "!explorerResourceIsFolder",
           "command": "git-by-solrike.discardChanges",
+          "when": "!explorerResourceIsFolder",
           "group": "Git@30"
 
         }
-      ]
+      ],
+      "view/item/context": [
+        {
+          "command": "git-by-solrike.openChanges",
+          "when": "view == javaProjectExplorer && viewItem =~ /java:[type|file](?=.*?\\b\\+uri\\b)/",
+          "group": "Git@20"
+        },
+        {
+          "command": "git-by-solrike.discardChanges",
+          "when": "view == javaProjectExplorer && viewItem =~ /java:[type|file](?=.*?\\b\\+uri\\b)/",
+          "group": "Git@30"
+        }
+      ]      
     }
   },
   "scripts": {
