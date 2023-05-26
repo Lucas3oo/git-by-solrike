@@ -1,7 +1,7 @@
 {
   "name": "git-by-solrike",
   "displayName": "Git by Solrike",
-  "description": "Visual studio code extension. Adds popular Git commands to the explorer context menu. For those that miss context menu items from Eclipse.",
+  "description": "Adds popular Git commands to the explorer context menu. For those that miss context menu items from Eclipse.",
   "version": "0.0.1",
   "license": "MIT",
   "author": "Lucas Persson",
