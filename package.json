@@ -5,7 +5,7 @@
   "version": "0.0.2",
   "license": "MIT",
   "author": "Lucas Persson",
-  "publisher": "solrike",  
+  "publisher": "solrike",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -26,27 +26,39 @@
   },
   "icon": "assets/icon.png",
   "readme": "README.md",
-
-
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./out/extension.js",
+  "extensionDependencies": [
+    "vscode.git"
+  ],
   "contributes": {
     "commands": [
       {
         "category": "Git",
-        "command": "git-by-solrike.discardChanges",
-        "title": "Replace with HEAD revision"
+        "command": "git-by-solrike.openChangesWithBranch",
+        "title": "Compare with branch"
       },
       {
         "category": "Git",
         "command": "git-by-solrike.openChanges",
         "title": "Compare with HEAD revision"
+      },
+      {
+        "category": "Git",
+        "command": "git-by-solrike.discardChanges",
+        "title": "Replace with HEAD revision"
       }
-
     ],
     "menus": {
       "explorer/context": [
         {
+          "command": "git-by-solrike.openChangesWithBranch",
+          "when": "!explorerResourceIsFolder && gitlensExtIsActive",
+          "group": "Git@15"
+        },
+        {
           "command": "git-by-solrike.openChanges",
           "when": "!explorerResourceIsFolder",
           "group": "Git@20"
@@ -55,11 +67,15 @@
           "command": "git-by-solrike.discardChanges",
           "when": "!explorerResourceIsFolder",
           "group": "Git@30"
-
         }
       ],
       "view/item/context": [
         {
+          "command": "git-by-solrike.openChangesWithBranch",
+          "when": "view == javaProjectExplorer && viewItem =~ /java:[type|file](?=.*?\\b\\+uri\\b)/",
+          "group": "Git@15"
+        },
+        {
           "command": "git-by-solrike.openChanges",
           "when": "view == javaProjectExplorer && viewItem =~ /java:[type|file](?=.*?\\b\\+uri\\b)/",
           "group": "Git@20"
@@ -69,7 +85,7 @@
           "when": "view == javaProjectExplorer && viewItem =~ /java:[type|file](?=.*?\\b\\+uri\\b)/",
           "group": "Git@30"
         }
-      ]      
+      ]
     }
   },
   "scripts": {
