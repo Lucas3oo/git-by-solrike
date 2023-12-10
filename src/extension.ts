@@ -17,10 +17,10 @@ export function activate(context: vscode.ExtensionContext) {
   const gitlensExt = vscode.extensions.getExtension("eamodio.gitlens")
 
   if (gitlensExt?.isActive) {
-    vscode.commands.executeCommand("setContext", "gitlensExtIsActive", true)
+    vscode.commands.executeCommand("setContext", "gitLensExtIsActive", true)
     context.subscriptions.push(
       vscode.commands.registerCommand(
-        "git-by-solrike.openChangesWithBranch",
+        "git-by-solrike.openChangesWithBranchOrTag",
         () => {
           vscode.commands.executeCommand("gitlens.diffWithRevisionFrom")
         }

@@ -4,6 +4,11 @@ All notable changes to the "git-by-solrike" extension will be documented in this
 
 ## [Unreleased]
 
+## [0.0.3] - 2023-12-10
+
+- Add new menu item _Compare with branch or tag_. Only available then the GitLens extension is installed.
+
+
 ## [0.0.2] - 2023-05-26
 
 - Add support for the Git context menu in the "Java projects" view from the "Project Manager for Java" extension.

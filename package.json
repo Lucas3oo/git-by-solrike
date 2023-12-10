@@ -2,7 +2,7 @@
   "name": "git-by-solrike",
   "displayName": "Git by Solrike",
   "description": "Adds popular Git commands to the explorer context menu. For those that miss context menu items from Eclipse.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "author": "Lucas Persson",
   "publisher": "solrike",
@@ -14,6 +14,7 @@
   ],
   "keywords": [
     "git",
+    "diff",
     "menu"
   ],
   "homepage": "https://github.com/Lucas3oo/git-by-solrike",
@@ -37,8 +38,8 @@
     "commands": [
       {
         "category": "Git",
-        "command": "git-by-solrike.openChangesWithBranch",
-        "title": "Compare with branch"
+        "command": "git-by-solrike.openChangesWithBranchOrTag",
+        "title": "Compare with branch or tag"
       },
       {
         "category": "Git",
@@ -54,8 +55,8 @@
     "menus": {
       "explorer/context": [
         {
-          "command": "git-by-solrike.openChangesWithBranch",
-          "when": "!explorerResourceIsFolder && gitlensExtIsActive",
+          "command": "git-by-solrike.openChangesWithBranchOrTag",
+          "when": "gitLensExtIsActive && !explorerResourceIsFolder",
           "group": "Git@15"
         },
         {
@@ -71,8 +72,8 @@
       ],
       "view/item/context": [
         {
-          "command": "git-by-solrike.openChangesWithBranch",
-          "when": "view == javaProjectExplorer && viewItem =~ /java:[type|file](?=.*?\\b\\+uri\\b)/",
+          "command": "git-by-solrike.openChangesWithBranchOrTag",
+          "when": "gitLensExtIsActive && view == javaProjectExplorer && viewItem =~ /java:[type|file](?=.*?\\b\\+uri\\b)/",
           "group": "Git@15"
         },
         {

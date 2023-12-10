@@ -5,18 +5,19 @@ For those that miss context menu items from Eclipse.
 
 ## Features
 
-The explorer context menu will have two additional items when a file is selected:
+The explorer context menu will have the following items when a file is selected:
 
-* Replace with HEAD revision - basically a `git checkout`
-* Compare with HEAD revision - basically a `git diff` 
+* Compare with branch or tag - basically a `git diff`. Depends on the Gitlens extension being installed.
+* Compare with HEAD revision - basically a `git diff`.
+* Replace with HEAD revision - basically a `git checkout`.
 
 Those commands are also available from the command palette.
 
-The context menu in the "Java projects" will also have the two menu items.
+The context menu in the "Java projects" will also have the menu items.
 
 ## Install
 
-Search for "Git by Solrike" or vist the [marketplace](https://marketplace.visualstudio.com/items?itemName=solrike.git-by-solrike).
+Search for "Git by Solrike" or visit the [marketplace](https://marketplace.visualstudio.com/items?itemName=solrike.git-by-solrike).
 
 ## Screenshots
 
@@ -34,3 +35,4 @@ Search for "Git by Solrike" or vist the [marketplace](https://marketplace.visual
 
 ## Change log
 See [CHANGELOG.md](./CHANGELOG.md)
+
