@@ -55,7 +55,7 @@
       "explorer/context": [
         {
           "command": "git-by-solrike.openChangesWithBranch",
-          "when": "!explorerResourceIsFolder && gitlensExtIsActive",
+          "when": "!explorerResourceIsFolder",
           "group": "Git@15"
         },
         {
