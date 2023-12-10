@@ -19,7 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
   const gitApi: API = gitExtension.getAPI(1)
 
   context.subscriptions.push(
-    vscode.commands.registerCommand('git-by-solrike.openChangesWithBranch', (uri: vscode.Uri) => {
+    vscode.commands.registerCommand('git-by-solrike.openChangesWithDefaultBranch', (uri: vscode.Uri) => {
       let ref = getDefaultBranch(gitApi, uri)
       const gitUri = gitApi.toGitUri(uri, ref)
       const filePath = uri.path.replace(vscode.workspace.rootPath! + '/', '')
