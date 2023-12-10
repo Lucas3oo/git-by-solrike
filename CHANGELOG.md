@@ -6,7 +6,7 @@ All notable changes to the "git-by-solrike" extension will be documented in this
 
 ## [0.0.3] - 2023-12-10
 
-- Add new menu item _Compare with branch or tag_. Only available then the GitLens extension is installed.
+- Add a new menu item _Compare with default branch_. 
 
 
 ## [0.0.2] - 2023-05-26

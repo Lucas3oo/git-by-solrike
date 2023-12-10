@@ -38,8 +38,8 @@
     "commands": [
       {
         "category": "Git",
-        "command": "git-by-solrike.openChangesWithBranchOrTag",
-        "title": "Compare with branch or tag"
+        "command": "git-by-solrike.openChangesWithDefaultBranch",
+        "title": "Compare with default branch"
       },
       {
         "category": "Git",
@@ -55,8 +55,8 @@
     "menus": {
       "explorer/context": [
         {
-          "command": "git-by-solrike.openChangesWithBranchOrTag",
-          "when": "gitLensExtIsActive && !explorerResourceIsFolder",
+          "command": "git-by-solrike.openChangesWithDefaultBranch",
+          "when": "!explorerResourceIsFolder",
           "group": "Git@15"
         },
         {
@@ -72,8 +72,8 @@
       ],
       "view/item/context": [
         {
-          "command": "git-by-solrike.openChangesWithBranchOrTag",
-          "when": "gitLensExtIsActive && view == javaProjectExplorer && viewItem =~ /java:[type|file](?=.*?\\b\\+uri\\b)/",
+          "command": "git-by-solrike.openChangesWithDefaultBranch",
+          "when": "view == javaProjectExplorer && viewItem =~ /java:[type|file](?=.*?\\b\\+uri\\b)/",
           "group": "Git@15"
         },
         {

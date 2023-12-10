@@ -7,8 +7,8 @@ For those that miss context menu items from Eclipse.
 
 The explorer context menu will have the following items when a file is selected:
 
-* Compare with branch or tag - basically a `git diff`. Depends on the Gitlens extension being installed.
-* Compare with HEAD revision - basically a `git diff`.
+* Compare with default branch - basically a `git diff main -- <path>`. 
+* Compare with HEAD revision - basically a `git diff <path>`.
 * Replace with HEAD revision - basically a `git checkout`.
 
 Those commands are also available from the command palette.
