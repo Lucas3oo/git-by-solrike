@@ -19,19 +19,30 @@ export function activate(context: vscode.ExtensionContext) {
   const gitApi: API = gitExtension.getAPI(1)
 
   context.subscriptions.push(
-    vscode.commands.registerCommand('git-by-solrike.openChangesWithDefaultBranch', (uri: vscode.Uri) => {
-      let ref = getDefaultBranch(gitApi, uri)
+    vscode.commands.registerCommand('git-by-solrike.openChangesWithDefaultBranch', async (uri: vscode.Uri) => {
+      let ref = await getDefaultBranch(gitApi, uri)
       const gitUri = gitApi.toGitUri(uri, ref)
-      const filePath = uri.path.replace(vscode.workspace.rootPath! + '/', '')
-      vscode.commands.executeCommand('vscode.diff', gitUri, uri, filePath + ' compare with "' + ref + '"')
+      const filePath = getFileName(uri.path)
+      vscode.commands.executeCommand('vscode.diff', gitUri, uri, filePath + ' compared with "' + ref + '" ')
     })
   )
 }
 
 export function deactivate() {}
 
-function getDefaultBranch(gitApi: API, uri: vscode.Uri): string {
+async function getDefaultBranch(gitApi: API, uri: vscode.Uri): Promise<string> {
   const repo = gitApi.getRepository(uri)
-  const defaultBranch = repo?.state.HEAD?.name || 'main'
+
+  let defaultBranch = 'master'
+  const branches = (await repo?.getBranches({})) ?? []
+  branches.forEach((b) => {
+    if (b.name === 'main') {
+      defaultBranch = b.name
+    }
+  })
   return defaultBranch
+}
+
+function getFileName(filePath: string): string {
+  return filePath.replace(/^.*[\\/]/, '')
 }

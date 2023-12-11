@@ -4,6 +4,10 @@ All notable changes to the "git-by-solrike" extension will be documented in this
 
 ## [Unreleased]
 
+## [0.0.4] - 2023-12-11
+
+- Fix issue with determine default branch. 
+
 ## [0.0.3] - 2023-12-10
 
 - Add a new menu item _Compare with default branch_. 

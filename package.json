@@ -2,7 +2,7 @@
   "name": "git-by-solrike",
   "displayName": "Git by Solrike",
   "description": "Adds popular Git commands to the explorer context menu. For those that miss context menu items from Eclipse.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "author": "Lucas Persson",
   "publisher": "solrike",
